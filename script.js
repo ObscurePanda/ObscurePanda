@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         });
 
-        selectedTabContent.style.display = 'block';
-
         if (selectedTabContent.style.display === 'none') {
           selectedTabContent.style.display = 'block';
         } else {

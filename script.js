@@ -1,5 +1,3 @@
-// JavaScript code for Temple of Lilith website
-
 document.addEventListener('DOMContentLoaded', function () {
   const tabs = document.querySelectorAll('input[name="tab"]');
   const tabContents = document.querySelectorAll('.tab-content');
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
         `.tab-content#${this.id}`
       );
 
-      // Hide the invocation of Lilith
       noTabSelected.style.display = 'none';
 
       tabContents.forEach((content) => {
@@ -28,6 +25,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Show the Invocation of Lilith initially
   noTabSelected.style.display = 'block';
 });

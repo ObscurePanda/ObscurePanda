@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #333333; /* Dark grey background */
 }
 
 header {
@@ -43,13 +44,14 @@ header {
 
 .tabs label {
   padding: 10px 20px;
-  background-color: #f0f0f0;
+  background-color: #ff0000; /* Red tabs */
   border-radius: 4px 4px 0 0;
   cursor: pointer;
+  color: #fff;
 }
 
 .tabs label:hover {
-  background-color: #e0e0e0;
+  background-color: #cc0000; /* Darker red on hover */
 }
 
 .tab-content {
@@ -57,6 +59,7 @@ header {
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 0 4px 4px 4px;
+  color: #333333;
 }
 
 .section-title {

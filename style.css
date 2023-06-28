@@ -35,7 +35,27 @@ body {
 }
 
 .tab-content {
-  display:
+  display: none;
+  padding: 20px;
+}
+
+footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.no-tab-selected {
+  display: none;
+  text-align: center;
+  font-family: 'Lucida Calligraphy', 'Cursive', sans-serif;
+  font-size: 24px;
+  margin-top: 20px;
+}
 
 input[type="radio"]:checked ~ .tab-content {
   display: block;

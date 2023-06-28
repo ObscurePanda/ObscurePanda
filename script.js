@@ -1,14 +1,34 @@
-const tabs = document.querySelectorAll('input[name="tab"]');
-const tabContents = document.querySelectorAll('.tab-content');
+// JavaScript code for Temple of Lilith website
 
-for (let i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener('change', () => {
-    // Hide all tab contents
-    for (let j = 0; j < tabContents.length; j++) {
-      tabContents[j].classList.remove('show');
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('input[name="tab"]');
+  const tabContents = document.querySelectorAll('.tab-content');
+  const noTabSelected = document.querySelector('.no-tab-selected');
 
-    // Show the selected tab content
-    tabContents[i].classList.add('show');
+  tabs.forEach((tab) => {
+    tab.addEventListener('change', function () {
+      if (this.checked) {
+        const selectedTabContent = document.querySelector(
+          `.tab-content#${this.id}`
+        );
+
+        tabContents.forEach((content) => {
+          if (content !== selectedTabContent) {
+            content.style.display = 'none';
+          }
+        });
+
+        selectedTabContent.style.display = 'block';
+
+        if (selectedTabContent.style.display === 'none') {
+          selectedTabContent.style.display = 'block';
+        } else {
+          selectedTabContent.style.display = 'none';
+        }
+      }
+    });
   });
-}
+
+  // Show the Invocation of Lilith when no tab is selected
+  noTabSelected.style.display = 'block';
+});

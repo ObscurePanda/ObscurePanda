@@ -19,18 +19,17 @@ nav {
 }
 
 .tabs {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .tabs li {
-  display: inline-block;
-  margin-right: 10px;
+  flex: 1;
 }
 
-.tabs input[type="radio"] {
-  display: none;
+.tabs li label {
+  display: block;
+  text-align: center;
 }
 
 .tabs label {

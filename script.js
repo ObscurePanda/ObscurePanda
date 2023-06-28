@@ -29,4 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Show the Invocation of Lilith when no tab is selected
   noTabSelected.style.display = 'block';
+
+  // Uncheck all tabs initially
+  tabs.forEach((tab) => {
+    tab.checked = false;
+  });
 });
+

@@ -2,7 +2,43 @@
 <html>
 <head>
   <title>Character Information</title>
-  <link rel="stylesheet" type="text/css" href="rabiastyle.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .tab {
+      display: none;
+    }
+
+    .tab.active {
+      display: block;
+    }
+
+    .tab-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ccc;
+      cursor: pointer;
+    }
+
+    .tab-button.active {
+      background-color: #f0f0f0;
+    }
+  </style>
+  <script>
+    function openTab(tabName) {
+      var tabs = document.getElementsByClassName('tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = 'none';
+      }
+
+      var tabButtons = document.getElementsByClassName('tab-button');
+      for (var i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('active');
+      }
+
+      document.getElementById(tabName).style.display = 'block';
+      document.getElementById(tabName + '-button').classList.add('active');
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -10,16 +46,43 @@
       <div class="character-image">
         <img src="Commission-Nefrare.jpg" alt="Character Image">
       </div>
-     <div class="character-details">
-  <h2>Name: Rabi'a al-Mawt</h2>
-  <p>Clan: [Clan Name]</p>
-  <p>Generation: [Generation]</p>
-  <p>Demeanor: [Demeanor]</p>
-  <p>Nature: [Nature]</p>
-  <p>Haven: [Haven]</p>
-</div>
+      <div class="character-details">
+        <h2>Name: Rabi'a al-Mawt</h2>
+        <p>Clan: [Clan Name]</p>
+        <p>Generation: [Generation]</p>
+        <p>Demeanor: [Demeanor]</p>
+        <p>Nature: [Nature]</p>
+        <p>Haven: [Haven]</p>
+      </div>
     </div>
   </div>
+  <div class="tabs">
+    <div class="tab-button active" id="personality-button" onclick="openTab('personality')">Personality</div>
+    <div class="tab-button" id="sect-allegiance-button" onclick="openTab('sect-allegiance')">Sect Allegiance</div>
+    <div class="tab-button" id="history-button" onclick="openTab('history')">History</div>
+  </div>
+
+  <div class="tab active" id="personality">
+    <h2>Personality</h2>
+    <p>[Personality information]</p>
+  </div>
+
+  <div class="tab" id="sect-allegiance">
+    <h2>Sect Allegiance</h2>
+    <p>[Sect Allegiance information]</p>
+  </div>
+
+  <div class="tab" id="history">
+    <h2>History</h2>
+    <p>[History information]</p>
+  </div>
+
+  <style>
+    .tabs {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
   <h2>Attributes</h2>
   <table>
     <tr>

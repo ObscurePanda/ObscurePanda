@@ -38,5 +38,27 @@
 }
 
 .characterSheetSectionContentItem {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.characterAttribute {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.characterAttribute.characterAttributeRed {
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 5px black, 0px 0px 5px black;
+}
+
+.characterAttribute.characterAttributeGrey {
+  background-color: lightgrey;
+  box-shadow: 0 0 5px black;
 }

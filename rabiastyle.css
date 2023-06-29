@@ -1,0 +1,38 @@
+#characterSheet {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.characterAttribute {
+    display: inline-block;
+    width: 80px;
+}
+
+.characterAttributeTitle {
+    font-weight: bold;
+}
+
+.characterAttributeRatings {
+    font-weight: normal;
+}
+
+.characterSheetSection {
+    margin-bottom: 20px;
+}
+
+.characterSheetSectionTitle {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.characterSheetSectionSubtitle {
+    font-style: italic;
+}
+
+.characterSheetSectionContent {
+    margin-top: 10px;
+}
+
+.characterSheetSectionContentItem {
+    margin-bottom: 5px;
+}

@@ -2,40 +2,86 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const characterSheet = document.getElementById('characterSheet');
 
   // Generate character sheet content
-  const characterAttributes = {
+const characterAttributes = {
+  'Physical': {
     'Strength': 'XXXXXXOO',
+    'Dexterity': 'XXXXOOOO',
+    'Stamina': 'XXXXXXXX'
+  },
+  'Social': {
     'Charisma': 'XXXXOOOO',
+    'Manipulation': 'XXXXXXXXO',
+    'Appearance': 'XXXXXXXXO'
+  },
+  'Mental': {
     'Perception': 'XXXXXOOO',
-    // ... Add other attributes
-  };
+    'Intelligence': 'XXXXXXXX',
+    'Wits': 'XXXXOOOO'
+  }
+};
+const characterAbilities = {
+  'Talents': {
+    'Alertness': 'XXXXO',
+    'Athletics': 'XXXXXX',
+    'Brawl': 'XXXXO',
+    'Empathy': 'OOOOO',
+    'Expression': 'OOOOO',
+    'Intimidation': 'XXXXO',
+    'Leadership': 'XXOOO',
+    'Streetwise': 'OOOOO',
+    'Subterfuge': 'XOOOO'
+  },
+  'Skills': {
+    'Animal Ken': 'OOOOO',
+    'Drive': 'OOOOO',
+    'Etiquette': 'XXOOO',
+    'Crafts': 'OOOOO',
+    'Firearms': 'OOOOO',
+    'Melee': 'XXXXO',
+    'Performance': 'OOOOO',
+    'Security': 'XXOOO',
+    'Stealth': 'XXXXXX',
+    'Survival': 'XXXXO'
+  },
+  'Knowledges': {
+    'Academics': 'XXXXXXXX',
+    'Computer': 'OOOOO',
+    'Finance': 'OOOOO',
+    'Investigation': 'XXXOO',
+    'Law': 'OOOOO',
+    'Medicine': 'XXXXXXXX',
+    'Occult': 'XXXXXXXX',
+    'Politics': 'OOOOO',
+    'Science': 'XXXOO',
+    'Thanatology': 'XXXXXX',
+    'Theology': 'XXXXO',
+    'Cappadocian Lore': 'XXXXXX (Lived Through It)',
+    'Kindred Lore': 'XXXXO',
+    'Noddist Lore': 'XXXOO',
+    'Biology': 'XXXXX'
+  }
+};
 
-  const characterAbilities = {
-    'Talents': {
-      'Alertness': 'XXXXXOOO',
-      'Athletics': 'XXXXXOOO',
-      'Brawl': 'XXXXOOOO',
-      // ... Add other talents
-    },
-    'Skills': {
-      'Animal Ken': 'XXXXOOOO',
-      'Drive': 'XXXXOOOO',
-      'Etiquette': 'XXXXOOOO',
-      // ... Add other skills
-    },
-    'Knowledges': {
-      'Academics': 'XXXXXOOO',
-      'Computer': 'XXXXXOOO',
-      'Finance': 'XXXXXOOO',
-      // ... Add other knowledges
-    }
-  };
-
-  const characterDisciplines = {
-    'Animalism': 'XX',
-    'Auspex': 'XX',
-    'Celerity': 'XX',
-    // ... Add other disciplines
-  };
+const characterDisciplines = {
+  'Auspex': 'XXXXXXXX (6: Celestial Harmony)',
+  'Fortitude': 'XXXXXXXX\n                X (Repair the Undead Flesh)',
+  'Dominate': 'XXOOOOOO',
+  'Celerity': 'XXXXOOOO',
+  'Potence': 'XXXXXOOO',
+  'Valeren': 'XOOOOOOO',
+  'Serpentis': 'XXXXXXOO',
+  'Protean': 'XXXOOOOO',
+  'Obtenebration': 'XXXXOOOO',
+  'Obfuscate': 'XXOOOOOO',
+  'Paths - Necromancy': {
+    'Corpse in the Monster': 'XXXXX',
+    'Grave’s Decay': 'XXXXX',
+    'Path of Ash': 'XXXXX',
+    'Sepulcher Path': 'XXXXX',
+    'Bone Path': 'XXXXX',
+    'Cenotaph Path': 'XXXX'
+  }
+};
 
   const characterSheetSections = [
     {

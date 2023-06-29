@@ -61,7 +61,6 @@ const characterAbilities = {
     'Biology': 'XXXXX'
   }
 };
-
 const characterDisciplines = {
   'Auspex': 'XXXXXXXX (6: Celestial Harmony)',
   'Fortitude': 'XXXXXXXX\n                X (Repair the Undead Flesh)',

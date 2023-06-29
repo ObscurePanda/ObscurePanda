@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Character Information</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="rabiastyle.css">
   <style>
     .tab {
       display: none;
@@ -23,22 +23,7 @@
       background-color: #f0f0f0;
     }
   </style>
-  <script>
-    function openTab(tabName) {
-      var tabs = document.getElementsByClassName('tab');
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = 'none';
-      }
-
-      var tabButtons = document.getElementsByClassName('tab-button');
-      for (var i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove('active');
-      }
-
-      document.getElementById(tabName).style.display = 'block';
-      document.getElementById(tabName + '-button').classList.add('active');
-    }
-  </script>
+ <script src="rabiascript.js"></script>
 </head>
 <body>
   <div class="container">

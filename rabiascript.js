@@ -9,10 +9,46 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // ... Add other attributes
   };
 
+  const characterAbilities = {
+    'Talents': {
+      'Alertness': 'XXXXXOOO',
+      'Athletics': 'XXXXXOOO',
+      'Brawl': 'XXXXOOOO',
+      // ... Add other talents
+    },
+    'Skills': {
+      'Animal Ken': 'XXXXOOOO',
+      'Drive': 'XXXXOOOO',
+      'Etiquette': 'XXXXOOOO',
+      // ... Add other skills
+    },
+    'Knowledges': {
+      'Academics': 'XXXXXOOO',
+      'Computer': 'XXXXXOOO',
+      'Finance': 'XXXXXOOO',
+      // ... Add other knowledges
+    }
+  };
+
+  const characterDisciplines = {
+    'Animalism': 'XX',
+    'Auspex': 'XX',
+    'Celerity': 'XX',
+    // ... Add other disciplines
+  };
+
   const characterSheetSections = [
     {
       title: 'Attributes',
       content: characterAttributes
+    },
+    {
+      title: 'Abilities',
+      content: characterAbilities
+    },
+    {
+      title: 'Disciplines',
+      content: characterDisciplines
     },
     // ... Add other sections with their content
   ];
@@ -31,23 +67,62 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const sectionContent = document.createElement('div');
     sectionContent.classList.add('characterSheetSectionContent');
 
-    Object.entries(section.content).forEach(([attribute, rating]) => {
-      const attributeContainer = document.createElement('div');
-      attributeContainer.classList.add('characterSheetSectionContentItem');
+    if (typeof section.content === 'object') {
+      if (section.title === 'Abilities') {
+        Object.entries(section.content).forEach(([abilityType, abilities]) => {
+          const abilityTypeContainer = document.createElement('div');
+          abilityTypeContainer.classList.add('characterSheetAbilityType');
 
-      const attributeTitle = document.createElement('span');
-      attributeTitle.classList.add('characterAttribute', 'characterAttributeTitle');
-      attributeTitle.textContent = attribute + ': ';
+          const abilityTypeTitle = document.createElement('div');
+          abilityTypeTitle.classList.add('characterSheetAbilityTypeTitle');
+          abilityTypeTitle.textContent = abilityType;
 
-      const attributeRating = document.createElement('span');
-      attributeRating.classList.add('characterAttribute', 'characterAttributeRatings');
-      attributeRating.textContent = rating;
+          abilityTypeContainer.appendChild(abilityTypeTitle);
 
-      attributeContainer.appendChild(attributeTitle);
-      attributeContainer.appendChild(attributeRating);
+          const abilityList = document.createElement('ul');
+          abilityList.classList.add('characterSheetAbilityList');
 
-      sectionContent.appendChild(attributeContainer);
-    });
+          Object.entries(abilities).forEach(([ability, rating]) => {
+            const abilityItem = document.createElement('li');
+            abilityItem.classList.add('characterSheetAbilityItem');
+
+            const abilityName = document.createElement('span');
+            abilityName.classList.add('characterSheetAbilityName');
+            abilityName.textContent = ability + ': ';
+
+            const abilityRating = document.createElement('span');
+            abilityRating.classList.add('characterSheetAbilityRating');
+            abilityRating.textContent = rating;
+
+            abilityItem.appendChild(abilityName);
+            abilityItem.appendChild(abilityRating);
+
+            abilityList.appendChild(abilityItem);
+          });
+
+          abilityTypeContainer.appendChild(abilityList);
+          sectionContent.appendChild(abilityTypeContainer);
+        });
+      } else {
+        Object.entries(section.content).forEach(([attribute, rating]) => {
+          const attributeContainer = document.createElement('div');
+          attributeContainer.classList.add('characterSheetSectionContentItem');
+
+          const attributeTitle = document.createElement('span');
+          attributeTitle.classList.add('characterAttribute', 'characterAttributeTitle');
+          attributeTitle.textContent = attribute + ': ';
+
+          const attributeRating = document.createElement('span');
+          attributeRating.classList.add('characterAttribute', 'characterAttributeRatings');
+          attributeRating.textContent = rating;
+
+          attributeContainer.appendChild(attributeTitle);
+          attributeContainer.appendChild(attributeRating);
+
+          sectionContent.appendChild(attributeContainer);
+        });
+      }
+    }
 
     sectionContainer.appendChild(sectionContent);
 

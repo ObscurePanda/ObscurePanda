@@ -1,36 +1,40 @@
-#characterSheet {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-.characterAttribute {
-    display: inline-block;
-    width: 80px;
+.character-card {
+  display: flex;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'YourFontName', cursive; /* Replace 'YourFontName' with the desired handwriting font */
 }
 
-.characterAttributeTitle {
-    font-weight: bold;
+.character-image {
+  padding: 20px;
 }
 
-.characterAttributeRatings {
-    font-weight: normal;
+.character-image img {
+  max-width: 100%;
 }
 
-.characterSheetSection {
-    margin-bottom: 20px;
+.character-details {
+  padding: 20px;
+  text-align: right;
 }
 
-.characterSheetSectionTitle {
-    font-weight: bold;
-    text-decoration: underline;
+.character-details h2 {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.characterSheetSectionSubtitle {
-    font-style: italic;
-}
-
-.characterSheetSectionContent {
-    margin-top: 10px;
+.character-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .characterSheetSectionContentItem {

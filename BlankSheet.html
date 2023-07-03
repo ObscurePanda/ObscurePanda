@@ -3,6 +3,27 @@
 <head>
     <title>Vampire: The Masquerade - Character Sheet</title>
     <link rel="stylesheet" type="text/css" href="BlankSheet.css">
+    <style>
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .attribute {
+            flex: 1;
+        }
+
+        .attribute-title {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div id="character-sheet">
@@ -11,45 +32,53 @@
         <div class="section">
             <h2 class="section-title">Attributes</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Physical</h3>
-                    <div class="subsection-content">
-                        <div class="label">Strength:</div>
-                        <div class="input"></div>
+                <div class="row">
+                    <div class="attribute">
+                        <h3 class="attribute-title">Physical</h3>
+                        <div class="subsection-content">
+                            <div class="label">Strength:</div>
+                            <div class="input">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
 
-                        <div class="label">Dexterity:</div>
-                        <div class="input"></div>
-
-                        <div class="label">Stamina:</div>
-                        <div class="input"></div>
+                            <div class="label">Stamina:</div>
+                            <div class="input">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Social</h3>
-                    <div class="subsection-content">
-                        <div class="label">Charisma:</div>
-                        <div class="input"></div>
+                    <div class="attribute">
+                        <h3 class="attribute-title">Social</h3>
+                        <div class="subsection-content">
+                            <div class="label">Charisma:</div>
+                            <div class="input">
+                                <!-- Add dots for Charisma -->
+                            </div>
 
-                        <div class="label">Manipulation:</div>
-                        <div class="input"></div>
-
-                        <div class="label">Appearance:</div>
-                        <div class="input"></div>
+                            <div class="label">Appearance:</div>
+                            <div class="input">
+                                <!-- Add dots for Appearance -->
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="subsection">
-                    <h3 class="subsection-title">Mental</h3>
-                    <div class="subsection-content">
-                        <div class="label">Perception:</div>
-                        <div class="input"></div>
+                    <div class="attribute">
+                        <h3 class="attribute-title">Mental</h3>
+                        <div class="subsection-content">
+                            <div class="label">Perception:</div>
+                            <div class="input">
+                                <!-- Add dots for Perception -->
+                            </div>
 
-                        <div class="label">Intelligence:</div>
-                        <div class="input"></div>
-
-                        <div class="label">Wits:</div>
-                        <div class="input"></div>
+                            <div class="label">Intelligence:</div>
+                            <div class="input">
+                                <!-- Add dots for Intelligence -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

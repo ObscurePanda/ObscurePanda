@@ -14,16 +14,32 @@
             border-radius: 50%;
         }
 
-        .row {
+        .section-content {
             display: flex;
         }
 
-        .attribute {
+        .subsection {
             flex: 1;
+            margin-right: 10px;
         }
 
-        .attribute-title {
+        .subsection-title {
             text-align: center;
+        }
+
+        .attribute {
+            margin-bottom: 5px;
+        }
+
+        .attribute-label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+        }
+
+        .attribute-dots {
+            display: inline-block;
+            width: 200px;
         }
 
         /* Styles for the home button */
@@ -54,52 +70,87 @@
         <div class="section">
             <h2 class="section-title">Attributes</h2>
             <div class="section-content">
-                <div class="row">
-                    <div class="attribute">
-                        <h3 class="attribute-title">Physical</h3>
-                        <div class="subsection-content">
-                            <div class="label">Strength:</div>
-                            <div class="input">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Physical</h3>
+                    <div class="subsection-content">
+                        <div class="attribute">
+                            <span class="attribute-label">Strength:</span>
+                            <span class="attribute-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </span>
+                        </div>
 
-                            <div class="label">Stamina:</div>
-                            <div class="input">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
+                        <div class="attribute">
+                            <span class="attribute-label">Stamina:</span>
+                            <span class="attribute-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </span>
+                        </div>
+
+                        <div class="attribute">
+                            <span class="attribute-label">Dexterity:</span>
+                            <span class="attribute-dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="attribute">
-                        <h3 class="attribute-title">Social</h3>
-                        <div class="subsection-content">
-                            <div class="label">Charisma:</div>
-                            <div class="input">
-                                <!-- Add dots for Charisma -->
-                            </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Social</h3>
+                    <div class="subsection-content">
+                        <div class="attribute">
+                            <span class="attribute-label">Charisma:</span>
+                            <span class="attribute-dots">
+                                <!-- Add dots for Charisma attribute -->
+                            </span>
+                        </div>
 
-                            <div class="label">Appearance:</div>
-                            <div class="input">
-                                <!-- Add dots for Appearance -->
-                            </div>
+                        <div class="attribute">
+                            <span class="attribute-label">Manipulation:</span>
+                            <span class="attribute-dots">
+                                <!-- Add dots for Manipulation attribute -->
+                            </span>
+                        </div>
+
+                        <div class="attribute">
+                            <span class="attribute-label">Appearance:</span>
+                            <span class="attribute-dots">
+                                <!-- Add dots for Appearance attribute -->
+                            </span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="attribute">
-                        <h3 class="attribute-title">Mental</h3>
-                        <div class="subsection-content">
-                            <div class="label">Perception:</div>
-                            <div class="input">
-                                <!-- Add dots for Perception -->
-                            </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Mental</h3>
+                    <div class="subsection-content">
+                        <div class="attribute">
+                            <span class="attribute-label">Perception:</span>
+                            <span class="attribute-dots">
+                                <!-- Add dots for Perception attribute -->
+                            </span>
+                        </div>
 
-                            <div class="label">Intelligence:</div>
-                            <div class="input">
-                                <!-- Add dots for Intelligence -->
-                            </div>
+                        <div class="attribute">
+                            <span class="attribute-label">Intelligence:</span>
+                            <span class="attribute-dots">
+                                <!-- Add dots for Intelligence attribute -->
+                            </span>
+                        </div>
+
+                        <div class="attribute">
+                            <span class="attribute-label">Wits:</span>
+                            <span class="attribute-dots">
+                                <!-- Add dots for Wits attribute -->
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -260,6 +311,10 @@
         </div>
         </div>
 
+        <div class="home-button">
+            <a href="https://obscurepanda.github.io/ObscurePanda/">Home</a>
+        </div>
+    </div>
     <script src="BlankSheet.js"></script>
 </body>
 </html>

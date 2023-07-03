@@ -21,6 +21,7 @@ h1 {
 
 .section-title {
     font-weight: bold;
+    text-align: center; /* Added */
 }
 
 .section-content {
@@ -34,16 +35,22 @@ h1 {
 
 .subsection-title {
     font-weight: bold;
+    text-align: center; /* Added */
+    display: flex; /* Added */
+    justify-content: space-between; /* Added */
 }
 
 .subsection-content {
     margin-left: 20px;
+    display: flex; /* Added */
+    justify-content: space-between; /* Added */
 }
 
 .label {
     display: inline-block;
     width: 100px;
     font-weight: bold;
+    text-align: right; /* Updated */
 }
 
 .input {

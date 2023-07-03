@@ -17,6 +17,7 @@ h1 {
 
 .section {
   margin-bottom: 10px;
+  text-align: center; /* Add text-align: center */
 }
 
 .section-title {

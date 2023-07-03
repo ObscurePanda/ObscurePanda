@@ -21,6 +21,7 @@ h1 {
 
 .section-title {
   font-weight: bold;
+  text-align: center; /* Add text-align: center */
 }
 
 .section-content {

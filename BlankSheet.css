@@ -1,90 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #character-sheet {
-    width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #000;
+  width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #000;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .section {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .section-title {
-    font-weight: bold;
-    text-align: center; /* Added */
+  font-weight: bold;
+  text-align: center;
 }
 
 .section-content {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .subsection {
-    margin-top: 10px;
-    margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .subsection-title {
-    font-weight: bold;
-    text-align: center; /* Added */
-    display: flex; /* Added */
-    justify-content: space-between; /* Added */
+  font-weight: bold;
+  text-align: center;
 }
 
 .subsection-content {
-    margin-left: 20px;
-    display: flex; /* Added */
-    justify-content: space-between; /* Added */
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subsection-content .label {
+  text-align: right;
 }
 
 .label {
-    display: inline-block;
-    width: 100px;
-    font-weight: bold;
-    text-align: right; /* Updated */
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
 }
 
 .input {
-    display: inline-block;
-    width: 200px;
+  display: inline-block;
+  width: 200px;
 }
 
 .button {
-    display: block;
-    width: 100px;
-    margin-top: 10px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
-    text-decoration: none;
+  display: block;
+  width: 100px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
 }
 
 .button:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
 .stats {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .stats label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .stats input {
-    width: 50px;
-    text-align: center;
+  width: 50px;
+  text-align: center;
 }

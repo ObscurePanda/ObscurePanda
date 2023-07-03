@@ -21,11 +21,12 @@ h1 {
 
 .section-title {
   font-weight: bold;
-  text-align: center;
 }
 
 .section-content {
   margin-left: 20px;
+  display: flex; /* Add flex display */
+  justify-content: space-between; /* Align subsections in columns */
 }
 
 .subsection {
@@ -35,17 +36,16 @@ h1 {
 
 .subsection-title {
   font-weight: bold;
-  text-align: center;
 }
 
 .subsection-content {
   margin-left: 20px;
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Display attributes in a column */
 }
 
-.subsection-content .label {
-  text-align: right;
+.attribute {
+  margin-bottom: 5px;
 }
 
 .label {
